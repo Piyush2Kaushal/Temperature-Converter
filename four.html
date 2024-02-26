@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <style>
+        body{
+            padding: 20vh;
+            background-color: rgb(26, 2, 2);
+        }
+        h1{
+            text-align: center;
+            font-style: oblique;
+            font-size: 3rem;
+            background-color: black;
+            color: white;
+            margin-bottom: 0;
+        }
+        .container{
+            background-color: rgb(150, 202, 244);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            display: inline-block;
+            padding: 50px;
+            text-align: center;
+        }
+        .inp{
+            text-align: center;
+            height: 2.2rem;
+            font-size: 1.5rem;
+        }
+        label{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <div class="container">
+        <div class="box">
+            <label>Celsius :</label><br>
+            <input type="number" value="0" class="inp" id="celsius">
+        </div>
+        <div class="box">
+            <label>Fahrenheit :</label><br>
+            <input type="number" value="32" class="inp" id="fahrenheit">
+        </div>
+    </div>
+    
+
+    <script>
+        let celsius = document.getElementById("celsius");
+        let fahrenheit = document.getElementById("fahrenheit");
+
+        celsius.addEventListener("input",function() {
+            let c = this.value;
+            let fo = (c * 9/5) + 32;
+            if(!Number.isInteger(fo)){
+                fo = fo.toFixed(3);
+            }
+            fahrenheit.value = fo;
+         });
+        fahrenheit.addEventListener("input",function(){
+            let f = this.value;
+            let co = (f - 32) * 5/9;
+            if(!Number.isInteger(co)){
+                co = co.toFixed(3);
+            }
+            celsius.value = co;
+        }); 
+    </script>
+</body>
+</html>
