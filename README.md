@@ -1,5 +1,4 @@
-# JS-fourth-repo
-Temperature Converter
+#Temperature Converter
 <br>
 This project is a simple web application that allows users to convert temperatures between Celsius, Fahrenheit. It was built using HTML, CSS, and JavaScript as a practice project to improve my front-end development skills.
 <br>
